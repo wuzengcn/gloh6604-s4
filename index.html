@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Session 4: Application of cost-effectiveness analysis</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Wu Zeng, MD, PHD" />
+    <script src="libs/header-attrs-2.30/header-attrs.js"></script>
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <link href="libs/panelset-0.3.0/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.3.0/panelset.js"></script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+    <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="libs/css/zuwm.css" type="text/css" />
+    <link rel="stylesheet" href="libs/css/zuwm-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+class: title-slide, center, middle
+
+# Session 4: Application of cost-effectiveness analysis
+## &lt;br/&gt;
+### Wu Zeng, MD, PHD
+### Georgetown University
+
+### 2026/02/21
+
+---
+# Outline 
+
+- Incremental cost-effectiveness ratio (ICER)
+
+- Decision rules 
+
+- Sensitivity analysis 
+
+- A case study: XXX
+
+- Final project 
+
+- Class exercise and case study
+---
+# ICER 
+
+`$$ICER = \frac{\Delta Cost}{\Delta \text{QALYs or DALYs}}$$`
+Interpretation:ICER is the .red[price] to pay to gain one year of perfect life
+
+--
+
+Example
+
+`$$ICER = \frac{\Delta Cost}{\Delta \text{QALYs or DALYs}} = \frac{1,000,000}{200} = 5000$$`
+--
+
+&lt;center&gt;
+### It cost .red[$5000] to save .red[one year of life with perfect health]
+
+---
+# A hypothetical example 
+
+A dengue vaccine cost .red[$20] per dose. Full vaccination a child under 9 years old requires 3 doses. The efficiency of the dengue vaccine was estimated to be .red[60%]. The .red[QALYs loss] per dengue infection, on average was estimated to be .red[0.035]. 
+
+The .red[incidence] of dengue in the country was estimated to be .red[2%] among children under 9. Assuming that the treatment cost per dengue case is, on average, .red[$100 per infection]. What is the incremental cost-effectiveness ratio (ICER) of the dengue vaccine. 
+--
+
+Based on this information, what would you recommend? [Poll](https://www.mentimeter.com/app/presentation/alxz84p1turvk4y3ayhceautkeqck39e/3dkxhvgj5auy)
+
+&lt;/center&gt;
+
+--
+
+`$$\text{Cost per person}_\text{vaccine} = \text{vaccine cost + treatment cost} = (20*3 + 2\%*(1-60\%)*100 = 60.8$$`
+
+`$$\text{Cost per person}_\text{non_vaccine} = (0 + 100*0.02) = 2$$`
+--
+DALYs loss per dengue infection = 0.035
+
+`$$\Delta QALY \text{ per person} = 2\%*0.035*0.6 = 0.00042$$`
+--
+
+`$$ICER = \frac{58.8}{0.00042} = 140,000$$`
+
+What does this number tell us? Is it worthwhile to deploy the vaccine to control dengue?
+
+---
+# Decision rule (Threshold)
+.pull-left[
+
+&lt;image src="libs/pic/Drules.png" width = "100%" &gt;
+
+]
+
+.pull-right[
+
+`$$ICER = \frac{\Delta Cost}{\Delta \text{QALYs or DALYs}}$$`
+GDP based threshilds
+
+- 1 times GDP per capita: .red[very] cost-effective
+
+- 3 times GDP per capita: Cost-effective
+
+- My threshold is 1.5 GDP per capita. 
+
+Willingness to pay (will be covered in the cost-benefit analysis)
+
+]
+
+---
+# Sensitivity analysis (varying key uncertain parameters in the model and repeat the analysis)
+
+.pull-left[
+key parameters may include 
+
+  - Cost of interventions 
+  
+  - Cost of treatment 
+  
+  - Epidemiological information 
+  
+  - Utility measures (quality of life or disability weight)
+  
+  - Discount rate
+]
+
+.pull-right[
+
+In practice, focus on 
+
+  - Key parameters with large uncertainty 
+  
+  - Key parameters that will change by setting (e.g. epidemiolgical status)
+
+]
+
+---
+# Type of sensitivity analysis (deterministic v. stochastic) 
+
+.pull-left[
+
+Static/Deterministic sensitivity analysis 
+
+- Manually change one or more than one parameters 
+  
+- One-way 
+  
+- Two-way, ... 
+  
+- Scenario analysis 
+
+]
+
+.pull-right[
+
+&lt;table class=" lightable-classic" style='color: black; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Parameters &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Value &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Vaccine cost per dose &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 20.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Number of dose &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Treatment of dengue &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 100.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Incidence &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; QALY per case &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.04 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Efficacy &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.60 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Discount rate &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.03 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; ICER &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 140000.00 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+]   
+    
+---
+# Example: One way deterministic sensitivity analysis, change incidence rate 
+
+.pull-left[
+
+&lt;table class=" lightable-classic" style='color: black; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Incidence &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; ICER &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 282857.14 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 140000.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.03 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 92380.95 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.04 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 68571.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 54286.00 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-3-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+# Example: Two way deterministic sensitivity analysis
+
+**Incidence and treatment cost**
+
+&lt;table class=" lightable-classic" style='color: black; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Incidence &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Treatment cost &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; ICER &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 282857.14 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 140000.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.03 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 92380.95 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 280000.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 137143.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.03 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 89524.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 277143.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 134286.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.03 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 86667.00 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+# Stochastic sensitivity analysis 
+
+.pull-left[
+
+Stochastic sensitivity analysis
+
+- Randomly draw a value from the distribution of the parameter under the assessment
+  
+- Repeat the analysis for defined numbers of times to generate the distribution of ICER 
+
+- Common distributions 
+  
+  - Cost (non-negative): Gamma distribution
+    
+  - Probability, Utility, and discount rate (between 0-1): Beta distribution
+    
+  - Others: most likely to be normal distribution
+]
+
+---
+# Gamma distribution
+
+.left-column[
+
+Key parameters: `\(\alpha\)` and `\(\beta\)`
+
+In mean and variance: `\(\mu = \alpha\beta\)` and `\(\sigma^2 = \alpha\beta^2\)`
+
+]
+
+.right-column[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-5-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+---
+# Beta distribution
+
+.left-column[
+
+Key parameters: `\(\alpha\)` and `\(\beta\)`
+
+In mean and variance: `\(\mu = \frac{\alpha}{\alpha+\beta}\)` and `\(\sigma^2 = \frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}\)`
+
+]
+
+.right-column[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-6-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Example: one way stochastic sensitivity analysis
+
+.pull-left[
+
+Assuming the mean of incidence rate is 2% with standard deviation of 1%, thus, the `\(\sigma^2= 1\%^2 = 1/10000=0.0001\)`
+
+We repeat the ICEA 10000 times. For each time, we randomly with draw from a number from the beta distribution for the incidence. 
+
+
+``` r
+set.seed(123)
+n_sim &lt;- 10000
+mu &lt;- 0.02
+sigmasq &lt;- 0.0001
+
+inc &lt;- rbeta(n_sim, shape1 = mu*(mu*(1-mu)/sigmasq - 1) , shape2 = (1-mu)*(mu*(1-mu)/sigmasq -1))
+icer &lt;- (20*3 + 100*inc*0.6)/(0.035*inc*0.6)
+df &lt;- data.frame(incidence = inc, ICER = icer
+)
+```
+
+]
+
+.pull-right[
+&lt;img src="index_files/figure-html/unnamed-chunk-8-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+```
+[1] "Median ICER = 158213.548762663 with 95% CI: 68179.3168348183 - 560039.756316828"
+```
+---
+class: inverse center middle 
+
+# The first principle of Cost-effectiveness analysis 
+
+---
+# Influenza vaccination program aged 65 and older 
+
+- Alternative: Vaccinations would be administered to 100,000 persons aged 65 and older over the next year by public health nurses in existing clinics and health centers.
+
+.pull-left[
+
+Cost and effectiveness information: 
+
+- Vaccination cost: $3 (medications, marginal labor costs, and so forth)
+  
+- Prevent 1,000 cases 
+  
+- 50 adverse reactions requiring treatment
+  
+- Influenza treatment cost: $50
+  
+- Treatment cost for adverse reaction: $300
+  ]
+  
+  .pull-right[
+
+Additional health effect information
+
+- Number of deaths averted: 10 individuals
+  
+- Additional year lived if averted: 8 years
+  
+- Improved quality of life if not infected: 0.04
+  
+- Reduced quality life with adverse effect: 0.09
+  ]
+  
+---
+# Estimation of ICER 
+
+Net cost = implementation cost - cost of saved treatment cost + cost of adverse effect
+
+Net cost = `\(3 * 100,000 - 50 * 1,000 + 300 * 50 = 265,000\)`
+
+`$$\text{Net effectiveness (QALYs gained)} =  \text{QALYs gained per death} * \text{Number of deaths} + \\ \text{QALYs gained per averted case} * \text{Number of averted case} - \\ \text{QALYs loss per case with adverse effect} * \text{Number of case with adverse effect}$$`
+QALYs per death = `\(Q*\frac{1-e^{-rL}}{r} = 1*\frac{1-e^{-0.05*8}}{0.05} = 6.59\)`
+
+`$$\text{Net effectiveness (QALYs gained)} =  6.79 * 10 + 0.04 * 1,000 - 0.09 * 50 = 103.4$$`
+$$ICER = \frac{\Delta Cost}{\Delta QALYs} = \frac{265,000}{103.4} = \$2,563/QALY$$
+
+---
+# Sensitivity analysis
+
+- Scenario analysis 
+
+- what if only averted 800 infections, instead of 1,000
+
+$$ICER = \$2,883/QALY $$
+---
+# Cost-effectiveness of a behavioral insights-informed digital campaign to increase HPV vaccination in Bangladesh
+
+.pull-left[
+
+- What is the intervention? 
+
+- What the impact of intervention on the cost and effectiveness 
+
+- How was the cost estimated? 
+
+- How was the effectiveness measured? 
+
+- What was the ICER? 
+
+- How was the sensitivity analysis was conducted?
+
+- What is the conclusion of the study?
+]
+
+.pull-right[
+
+&lt;embed src="libs/pic/S4-Agha-2026.pdf" width="100%" height="450px" style="display: block; margin: auto;" type="application/pdf" /&gt;
+
+]
+
+---
+---
+# Class excise (Using excel)
+
+Please see the attached file (40 mins)
+
+Hint: 
+
+- What is the intervention 
+
+- What is the impact of the intervention 
+
+  - on mortality 
+  
+  - on incidence 
+  
+  - on utility
+  
+- set up excel spreadsheet
+
+Reporting
+
+---
+# Final project: Outline 
+
+- Title page (do not count in length)
+
+  - Title of the paper;  Author's name; Date
+  
+  - Abstract
+
+- Main text (no more than 3,000 words)
+
+  - Introduction
+  
+  - Methods 
+  
+  - Results 
+  
+  - Discussion
+  
+- End (do not count in length)
+
+  - References 
+  
+  - Acknowledgement
+
+---
+# Final paper: Length 
+
+- Length limitation for main section: 2,500 words excluding tables, figures, and references
+
+- Number of tables and Figures: Maximum of 5 tables and Figures in combination
+
+- Format 
+
+  - 1 inch margin (left, right, top, bottom)
+  
+  - Double space
+  
+  - 11 font size, times new roman
+  
+  - Left alignment only
+
+---
+# Final paper: Style 
+
+Correct English – use spell checker and grammar checker.
+
+Follow an established style regarding headings, sub-headings, capitalization, indentation, such as American Psychological Association.
+
+Enter citations for quotes and information from articles, reports, and web sites.
+
+Use parenthetical information for personal communication (source, title, organization, month, year).
+
+---
+
+# Final paper: simplify
+
+1. Intervention: The status quo plus one intervention
+
+2. Costs: The most immediate costs carefully done.
+
+3. Effectiveness: The single most important effectiveness measure
+
+---
+
+# Paper: discussion and conclusions
+
+1. Discuss strengths and limitations of work.
+
+2. What would be your recommendation?
+
+3. How does the real world compare with the simplified version you may have analyzed?
+
+4. What are possible additional beneficial or adverse impacts, and how would they affect your results 
+
+---
+# Supplemental readings 
+
+Salomon JA, et al. 2015. Disability weights for the Global Burden of Disease 2013 study. Lancet Glob Health 3:e712-723. 
+
+(This shows how quality of life was assessed for a recent Global Burden of Diseases Study.  Companion papers in the the Lancet show impacts on mortality and complications of these conditions.)
+
+---
+
+class: center middle inverse 
+
+# Write a journal article
+
+---
+
+# The scientific paper 
+
+A well-written scientific paper explains 
+
+- the scientist's .red[motivation] for doing an experiment, 
+
+- the .red[experimental design and execution], and 
+
+- the .red[meaning] of the results. 
+
+Scientific papers are written in a style that is exceedingly .red[clear] and .red[concise]. 
+
+Their purpose is to inform an audience of other scientists about an important issue and to document the particular approach they used to investigate that issue.
+
+---
+background-image: url(https://s3.amazonaws.com/libapps/accounts/43304/images/anatomyscholarlyarticle.png)
+background-size: 50%
+background-position: 100% 50%
+
+
+# Structure of a scentific paper
+
+1. Abstract 
+
+1. Introduction 
+
+1. Methods
+
+1. Results 
+
+1. Discussion/Conclusion
+
+1. References 
+
+---
+
+# Abstract
+
+A shortened version of the paper, and it should contain 
+
+.left-column[
+
+1. Objectives 
+
+2. Methods
+
+3. Results
+
+4. Discussion/Significance
+]
+
+.right-column[
+
+Background: This study retrospectively examines the cost-effectiveness of the national HPV vaccination program using the program cost and coverage data in Nigeria.
+
+Methods: We conducted a cost-effectiveness analysis of the HPV vaccination program compared with no vaccination in Nigeria, adopting both health system and societal perspectives. A static Markov model simulating HPV infection and cervical cancer outcomes was developed for a cohort of girls aged 9–14 years, followed until age 100. The model comprised primarily the following health states: susceptible, cervical cancer, and death. It further incorporated three additional pathways for patients with cervical cancer, including those with successful treatment, with treatment failure, and with no treatment.
+
+Results: The incremental cost-effectiveness ratio (ICER) was estimated at $268.67 per quality-adjusted life year (QALY) gained from the health system perspective and $217.85 per QALY gained from the societal perspective. Both ICERs were well below the cost-effectiveness threshold of one-time GDP per capita in Nigeria ($806.95). Key drivers of cost-effectiveness included vaccine cost, treatment success rate, cervical cancer treatment coverage, and cervical cancer utility values.
+
+Discussion: The single-dose HPV vaccination program is highly cost-effective in Nigeria, compared to the status quo of no vaccination. To ensure long-term sustainability, the Nigerian government should strengthen financing mechanisms and the healthcare system to support the program.
+]
+---
+# Introduction 
+
+### The place to convince readers that you know why your work is relevant, also for them
+
+.pull-left[
+
+- What is the problems?
+
+- Are there any existing solutions?
+
+- Which one is the best?
+
+- What is its main limitation?
+
+- How do you hope to improve or contribute to this?
+
+]
+
+.pull-right[
+
+&lt;embed src="libs/pic/s4-Gao-2025.pdf" width="100%" height="450pt" style="display: block; margin: auto;" type="application/pdf" /&gt;
+
+]
+
+---
+# Introduction (continue)
+
+- This section discusses the results and conclusions of .red[previously published studies], to help explain why the current study is of scientific .red[interest].
+
+- The Introduction is organized to move .red[from general information] to .red[specific information]. 
+
+- The background must be summarized succinctly, but it should not be itemized. 
+
+- Limit the introduction to studies that relate directly to the present study. 
+
+- Emphasize your specific contribution to the topic.
+
+- The last sentences of the introduction should be a statement of objectives and a statement of hypotheses. 
+
+---
+# Introduction (example)
+
+&gt; Nigeria encounters great health challenges triggered by HPV infection and cervical cancer. 
+
+&gt; Prior studies have demonstrated the cost-effectiveness of HPV
+vaccination in Nigeria, with a wide range of the incremental cost-
+effectiveness ratios (ICERs)
+
+&gt; To fill in this gap, the study leverages the real-world
+costing data from Nigeria’s national routine immunization program, aiming to model the cost-effectiveness of the ongoing national
+one-dose HPV vaccination program targeting girls aged 9–14 years, in comparison with a scenario without a vaccination program.
+
+
+---
+# Methods 
+
+The objective of the methods section is to describe exactly what you did, and how, in .red[sufficient detail] such that any average reader with the same resources at their disposal would be able to .red[reproduce] your study.
+
+.pull-left[
+
+- Perspective 
+
+- Measure cost
+
+- Meaure effectiveness 
+
+- ICER esimation and sensitivity analysis
+]
+
+.pull-right[
+
+### Perspective 
+
+&gt;  We conducted a cost-effectiveness analysis of HPV vaccination from both the health system and societal perspectives, according to the recommendation proposed by the Second Panel on Cost-effectiveness in Health and Medicine. We compared two scenarios: (1) the intervention with the one-dose HPV vaccination program; and (2) the status quo without a vaccination program for girls aged 9–14 in Nigeria.
+
+]
+---
+
+### Methods
+
+- Model construction
+
+&gt; A Markov model was constructed to assess the health effects of HPV vaccination for girls aged 9–14. The model started with a hypothetical cohort of 100,000 girls aged 9–14, who were followed through to 100 years old. 
+
+- Cost estimation and data sources 
+
+&gt; We analyzed the costs considering both the health system and societal perspectives. In this study, health system costs of the HPV vaccination program included the HPV vaccine cost, service delivery cost, cost of vaccine wastage, cost incurred by other HPV vaccination introduction program activities, and direct medical costs due to cervical cancer.
+
+- Effectiveness measures and data sources 
+
+&gt; We modeled the effectiveness of HPV vaccination using a Markov
+model. 
+
+&gt; Using the Markov model, we estimated the differences in the number of cervical cancer cases and deaths between the two scenarios. To translate these outcomes into QALYs for cost-effectiveness analysis, we assigned utility weights to each of the six health states. Future effectiveness gains (e.g., QALYs) were discounted at an annual rate of 3 %.
+
+---
+
+# Methods (continue)
+
+- ICER and sensitivity analysis 
+
+&gt; The ICERs for the HPV vaccination program, relative to the base
+scenario of no vaccination program, were assessed from both the health system and societal perspectives.
+
+&gt; The questionnaire consisted of four major components: a willingness-to-pay module for designed health-insurance packages, demographic characteristics of households and household members, socioeconomic status and health status of respondents and their family members.
+
+- Sensitivity analysis 
+
+&gt; We conducted univariate sensitivity analyses by altering key parameters individually. The key parameters used included ... 
+
+&gt; Monte Carlo simulations with 10,000 iterations were conducted to estimate the mean ICERs along with their 95 % confidence intervals (CIs) and generate a cost-effectiveness acceptability curve.
+
+---
+
+# Results 
+
+The aim of the results section is to describe what you observed, .red[without commentary or discussion].
+
+
+You will .red[not present the raw data] that you collected, but rather you will .red[summarize] the data with .red[text, tables and/or figures].
+
+Use the text of the paper to state the results of your study, then refer the reader to a table or figure where they can see the data for themselves.
+
+If the paper is using a dataset for the analysis, generally, it starts with the descriptive analysis (univariate analysis), then bivariate analysis, and then multivariate analysis
+
+---
+
+# Presentation of findings
+
+### Text 
+
+- used when the results can be easily described in one or two lines 
+
+### Tables 
+
+- used for most important results, and on their own, sufficent to give readers a clear idea of findings 
+
+### Figures 
+
+- Used for complex findings that are not easer for interpretation
+
+---
+
+# Results examples
+
+&gt; Table 2 presents the cost estimates for the one-dose HPV vaccination program compared to the status quo (no vaccination) for a cohort of 100,000 girls. Under the status quo, the health system incurred only the direct medical cost of cervical cancer treatment, totaling $84,863. 
+
+&lt;table class=" lightable-classic" style='color: black; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Perspective &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Cost component &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Status quo &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Vaccination program &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Health system related cost &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Vaccine cost including wastage &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 359,100 (358,233-360,732) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Service delivery cost in the program &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 17,480 (17,466-17,587) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Other program activity cost &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 81,000 (80,000-82,000) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Direct medical cost &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 84,863 (81,119-91,485) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 40,895 (38,256-45,403) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Subtotal (health system cost) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 84,863 (81,119-91,485) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 498,475 (493,802 – 501,173) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Additional cost from society perspective &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Direct non-medical cost &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 82,002 (78,838-89,046) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 39,516 (36,557-43,582) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Indirect cost &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 69,003 (64,981-73,339) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 33,251 (29,394-35,169) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Subtotal (additional cost) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 151,005 (142,274-160,768) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 72,767 (67,126-80,067) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Total (Social cost) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 235,868 (216,172-244,403) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 571,242 (566,006-586,525) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+---
+# Results examples 
+
+.pull-left[
+
+### Cost-effectiveness
+
+&gt; Table 4 presents the results of the cost-effectiveness analysis. From the health system perspective, an ICER of $268.67 per QALY gained was estimated, with 95 % CI of $183.76 – $385.53 per QALY gained. From the societal perspective, an ICER of $217.85 per QALY gained was estimated with a 95 % CI of $136.99 – $328.02 per QALY gained.
+]
+
+.pull-right[
+### Sensitivity analysis
+
+&lt;image src="https://ars.els-cdn.com/content/image/1-s2.0-S2213538325001195-gr1_lrg.jpg" width="90%"&gt;
+
+]
+
+---
+
+# Discussion 
+
+This discussion is where you interpret and explain the significance of your results, and how they fit into the wider picture of what has already been observed and reported on the same topic.
+
+.pull-left[
+
+1. .red[Recap] your key findings (First paragraph of the discussion)
+
+2. .red[Interpret] key findings one by one
+
+  1. State your finding
+  
+  1. Compare your finding with other study findings 
+  
+  1. How do you interpret your findings 
+  
+  1. What are implication of your findings
+
+3. Implications if they are not combined with your interpretation of findings
+
+4. Limitations
+
+5. Conclusion (sometimes)
+
+]
+
+.pull-right[
+
+The results of our analysis prove that the one-dose HPV vaccination is a highly cost-effective intervention in reducing cervical cancer mortality for a cohort of girls aged 9–14 in Nigeria. Concerning the effectiveness, the vaccination program would avert 924 cervical cancer cases and 287 deaths due to cervical cancer, leading to 1,539 QALYs gained compared to the status quo. These generate ICERs of $268.67 and $217.85 per QALY gained from the health system and societal perspective, respectively. Both values are below the one-time GDP per capita ($806.95) in Nigeria. Additionally, the one-way sensitivity analysis suggests that the ICER is most sensitive to the change in the HPV vaccine cost, followed by treatment success rate and treatment coverage of cervical cancer.
+
+]
+---
+
+# Intpretation of findings 
+
+&gt; This study shows that the HPV vaccination program is highly cost-effective in Nigeria. This finding is consistent with findings from other studies conducted in the country . Our ICER estimate is comparable to that of Goldie and Kim, but lower than Ekwunife’s assessment ($7,930-$32,167 per DALY averted) of the two-dose HPV vaccination program. The key difference between our estimate and Ekwunife’s is primarily due to the difference in dosage. The two-dose regime in Ekwunife’s study had higher vaccine costs compared with the one-dose regime used in our model. As shown from the one-way sensitivity analysis, the vaccine cost is the major driver of the cost-effectiveness results.
+
+### Implications 
+
+&gt; Therefore, one dose of HPV vaccine provides a more financially feasible approach for initiating and scaling up a national HPV immunization program.
+
+---
+
+# Limitations
+
+.left-column[
+
+What limitations are? 
+
+How limitations affect results?
+
+What direction of the effects?
+
+What have done to mitigate the effect?
+]
+
+.right-column[
+&gt; The study is subject to several limitations. First, the Markov model did not incorporate the costs related to detecting or treating precancerous lesions. Since we did not include the screening in the model and the screening in Nigeria is opportunistic [36], the chance to detect precancerous lesions is slim. Thus, the cost associated with detecting or treating precancerous lesions would be minimal. Second, we did not capture the herd immunity of the HPV vaccine. Herd immunity of the HPV vaccine has been documented, with a wide variation [37]. The omission of the herd immunity may result in an underestimation of the potential impact of HPV vaccination. Third, we assumed an immediate increase in the coverage of HPV vaccination to 76%, which is unrealistic. In Nigeria, the national HPV program took about two years to reach the level we specified in the model. However, this limitation would not significantly affect the analysis results, given that the cost associated with the HPV program is proportionate to the HPV coverage.
+
+
+]
+
+---
+# Conclusions (summary of key findings and implications)
+
+&gt; The single-dose quadrivalent HPV vaccination program for girls aged 9–14 is very cost-effective in Nigeria, compared to no vaccination. The inclusion of a one-dose HPV vaccine strategy into the national vaccine program could substantially reduce the cervical cancer burden at reasonable costs from both health system and societal perspectives. As Nigeria progresses towards graduation from Gavi support, ensuring long-term sustainability will require deliberate strategies to strengthen domestic financing, integrate HPV vaccination into broader immunization planning, and safeguard the gains already achieved.
+
+---
+# References 
+
+I generally use software "ENDNOTE" to compile references (Paid software)
+
+- Any idea or fact that emanates from another source (other than yourself) needs to be supported by a reference.
+
+- Universal truths or facts that are widely established do not need to be referenced
+
+- Internet sites should be avoided where possible, as should personal communications and unpublished data.
+
+There are some free bibliographic management software
+
+.left-column[
+
+- RefWork
+
+- Mendely 
+
+- Zotero 
+
+]
+
+.right-column[
+
+1. .red[A. Asgary, K. Willis, A.A. Taghvaei, M. Rafeian]. .blue[Estimating rural households' willingness to pay for health insurance.] .green[Eur J Health Econ], .purple[5 (2004), pp. 209-215]
+]
+
+---
+# Writing orders
+
+### Results
+
+### Methodology
+
+### Introduction
+
+### Discussion 
+
+### Abstract
+
+### Title
+
+---
+class: center middle
+
+.Large[# Thank you!]
+
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg> : [wz192@georgetown.edu](mailto:wz192@georgetown.edu)
+
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> : [@wuzengcn](@wuzengcn)
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false,
+  "ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
