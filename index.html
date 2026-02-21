@@ -78,7 +78,7 @@ Based on this information, what would you recommend? [Poll](https://www.mentimet
 
 `$$\text{Cost per person}_\text{non_vaccine} = (0 + 100*0.02) = 2$$`
 --
-DALYs loss per dengue infection = 0.035
+QALYs loss per dengue infection = 0.035
 
 `$$\Delta QALY \text{ per person} = 2\%*0.035*0.6 = 0.00042$$`
 --
@@ -240,7 +240,7 @@ Static/Deterministic sensitivity analysis
 
 .pull-right[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-3-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-3-1.png" alt="" width="80%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -313,9 +313,9 @@ Static/Deterministic sensitivity analysis
 
 Stochastic sensitivity analysis
 
-- Randomly draw a value from the distribution of the parameter under the assessment
+- .red[Randomly] draw .red[a value] from the distribution of the parameter under the assessment
   
-- Repeat the analysis for defined numbers of times to generate the distribution of ICER 
+- .red[Repeat] the analysis for defined numbers of times to generate the distribution of ICER 
 
 - Common distributions 
   
@@ -339,7 +339,7 @@ In mean and variance: `\(\mu = \alpha\beta\)` and `\(\sigma^2 = \alpha\beta^2\)`
 
 .right-column[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-5-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-5-1.png" alt="" width="60%" style="display: block; margin: auto;" /&gt;
 ]
 ---
 # Beta distribution
@@ -354,7 +354,7 @@ In mean and variance: `\(\mu = \frac{\alpha}{\alpha+\beta}\)` and `\(\sigma^2 = 
 
 .right-column[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-6-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-6-1.png" alt="" width="60%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -383,7 +383,7 @@ df &lt;- data.frame(incidence = inc, ICER = icer
 ]
 
 .pull-right[
-&lt;img src="index_files/figure-html/unnamed-chunk-8-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-8-1.png" alt="" width="80%" style="display: block; margin: auto;" /&gt;
 
 ]
 
